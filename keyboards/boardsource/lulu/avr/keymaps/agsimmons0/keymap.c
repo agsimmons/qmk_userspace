@@ -3,8 +3,19 @@
 
 #include QMK_KEYBOARD_H
 
+enum layers {
+    _BASE,
+    _GAME,
+    _RAISE,
+    _LOWER,
+    _ADJUST,
+};
+
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)
+
+#define BASE DF(_BASE)
+#define GAME DF(_GAME)
 
 // Left-hand home row mods (COLEMAKDH)
 #define HRM_A LGUI_T(KC_A)
@@ -17,18 +28,6 @@
 #define HRM_E RSFT_T(KC_E)
 #define HRM_I LALT_T(KC_I)
 #define HRM_O RGUI_T(KC_O)
-
-enum layers {
-    _DEFAULT,
-    _GAME,
-    _RAISE,
-    _LOWER,
-    _ADJUST,
-};
-
-enum custom_keycodes {
-    KC_BASE = SAFE_RANGE,
-};
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -47,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
- [_DEFAULT] = LAYOUT(
+ [_BASE] = LAYOUT(
   XXXXXXX, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_GRV,
   XXXXXXX, KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_MINS,
   KC_ESC,  HRM_A,   HRM_R,   HRM_S,   HRM_T,   KC_G,                      KC_M,    HRM_N,   HRM_E,   HRM_I,   HRM_O,   KC_QUOT,
@@ -119,9 +118,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * | BASE |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |  F1  |  F2  |  F3  |  F4  |      |                    |      |      |      |      |      |      |
+ * | GAME |  F1  |  F2  |  F3  |  F4  |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |  F5  |  F6  |  F7  |  F8  |      |-------.    ,-------|      |      |      |      |      |      |
  * |------+------+------+------+------+------|       |    |RGB_TOG|------+------+------+------+------+------|
@@ -132,8 +131,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
   [_ADJUST] = LAYOUT(
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  BASE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  GAME, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, XXXXXXX, RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                              XXXXXXX, _______, _______, _______, _______, _______, _______, XXXXXXX
