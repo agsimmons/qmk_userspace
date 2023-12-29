@@ -80,9 +80,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |   !  |   @  |   #  |   $  |   %  |                    |   ^  |   &  |   *  |   `  |   ~  |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   "  |   [  |   {  |   (  |      |-------.    ,-------|   /  |   -  |   =  |   :  |   ;  |      |
+ * |      |   "  |   [  |   {  |   (  |   <  |-------.    ,-------|   /  |   -  |   =  |   :  |   ;  |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |      |   '  |   ]  |   }  |   )  |      |-------|    |-------|   \  |   _  |   +  |   |  |   ?  |      |
+ * |      |   '  |   ]  |   }  |   )  |   >  |-------|    |-------|   \  |   _  |   +  |   |  |   ?  |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   |      | Tab  |LOWER | /Space  /       \Enter \  |RAISE |BackSP|      |
  *                   |      |      |      |/       /         \      \ |      |      |      |
@@ -91,8 +91,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_GRV,  KC_TILD, XXXXXXX,
-  XXXXXXX, KC_DQUO, KC_LBRC, KC_LCBR, KC_LPRN, XXXXXXX,                   KC_SLSH, KC_MINS, KC_EQL,  KC_COLN, KC_SCLN, XXXXXXX,
-  XXXXXXX, KC_QUOT, KC_RBRC, KC_RCBR, KC_RPRN, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS, KC_UNDS, KC_PLUS, KC_PIPE, KC_QUES, XXXXXXX,
+  XXXXXXX, KC_DQUO, KC_LBRC, KC_LCBR, KC_LPRN, KC_LABK,                   KC_SLSH, KC_MINS, KC_EQL,  KC_COLN, KC_SCLN, XXXXXXX,
+  XXXXXXX, KC_QUOT, KC_RBRC, KC_RCBR, KC_RPRN, KC_RABK, XXXXXXX, XXXXXXX, KC_BSLS, KC_UNDS, KC_PLUS, KC_PIPE, KC_QUES, XXXXXXX,
                              XXXXXXX, _______, _______, _______, _______, _______, _______, XXXXXXX
 ),
 /* RAISE
