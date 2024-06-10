@@ -35,9 +35,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   Q  |   W  |   F  |   P  |   B  |                    |   J  |   L  |   U  |   Y  |   ;  |      |
+ * | ESC  |   Q  |   W  |   F  |   P  |   B  |                    |   J  |   L  |   U  |   Y  |   ;  |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   A  |   R  |   S  |   T  |   G  |-------.    ,-------|   M  |   N  |   E  |   I  |   O  |      |
+ * | Tab  |   A  |   R  |   S  |   T  |   G  |-------.    ,-------|   M  |   N  |   E  |   I  |   O  |      |
  * |      | LGUI | LAlt |LShift| LCTRL|      |       |    |       |      |RCTRL |RShift| LAlt | RGUI |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |   ,  |   .  |   /  |      |
@@ -46,10 +46,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
- [_BASE] = LAYOUT(
+[_BASE] = LAYOUT(
   XXXXXXX, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    XXXXXXX,
-  XXXXXXX, KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, XXXXXXX,
-  XXXXXXX, HRM_A,   HRM_R,   HRM_S,   HRM_T,   KC_G,                      KC_M,    HRM_N,   HRM_E,   HRM_I,   HRM_O,   XXXXXXX,
+  KC_ESC,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, XXXXXXX,
+  KC_TAB,  HRM_A,   HRM_R,   HRM_S,   HRM_T,   KC_G,                      KC_M,    HRM_N,   HRM_E,   HRM_I,   HRM_O,   XXXXXXX,
   XXXXXXX, KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,    XXXXXXX, XXXXXXX, KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, XXXXXXX,
                              XXXXXXX, XXXXXXX, LOWER,   KC_SPC,  KC_ENT,  RAISE,   KC_BSPC, XXXXXXX
 ),
