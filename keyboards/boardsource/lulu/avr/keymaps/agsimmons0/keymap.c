@@ -78,9 +78,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   '  |   "  |   ^  |   ?  |   `  |                    |   [  |   <  |   =  |   >  |   ]  |      |
+ * |      |   $  |   %  |   ^  |   ?  |   `  |                    |   [  |   <  |   =  |   >  |   ]  |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   !  |   @  |   #  |   $  |   %  |-------.    ,-------|   {  |   (  |   :  |   )  |   }  |      |
+ * |      |   !  |   @  |   #  |   "  |   '  |-------.    ,-------|   {  |   (  |   :  |   )  |   }  |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      |   \  |   ~  |   |  |   ;  |   &  |-------|    |-------|   /  |   *  |   -  |   +  |   _  |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -90,8 +90,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, KC_QUOT, KC_DQUO, KC_CIRC, KC_QUES, KC_GRV,                    KC_LBRC, KC_LABK, KC_EQL,  KC_RABK, KC_RBRC, XXXXXXX,
-  XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_LCBR, KC_LPRN, KC_COLN, KC_RPRN, KC_RCBR, XXXXXXX,
+  XXXXXXX, KC_DLR,  KC_PERC, KC_CIRC, KC_QUES, KC_GRV,                    KC_LBRC, KC_LABK, KC_EQL,  KC_RABK, KC_RBRC, XXXXXXX,
+  XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DQUO, KC_QUOT,                   KC_LCBR, KC_LPRN, KC_COLN, KC_RPRN, KC_RCBR, XXXXXXX,
   XXXXXXX, KC_BSLS, KC_TILD, KC_PIPE, KC_SCLN, KC_AMPR, XXXXXXX, XXXXXXX, KC_SLSH, KC_ASTR, KC_MINS, KC_PLUS, KC_UNDS, XXXXXXX,
                              XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, XXXXXXX
 ),
