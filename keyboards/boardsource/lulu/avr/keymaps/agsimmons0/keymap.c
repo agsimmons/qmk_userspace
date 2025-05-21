@@ -118,24 +118,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* ADJUST
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | BASE |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * | GAME |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | GAME |  F1  |  F2  |  F3  |  F4  |      |                    | Prev | Play | Next |      |      |
+ * | BASE |  F9  |  F10 |  F11 |  F12 |      |                    | Prev | Play | Next |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |  F5  |  F6  |  F7  |  F8  |      |-------.    ,-------|      | VOLU | VOLD |      |      |      |
  * |------+------+------+------+------+------|       |    |RGB_TOG|------+------+------+------+------+------|
- * |      |  F9  |  F10 |  F11 |  F12 |      |-------|    |-------|      |      |      |      |      |      |
+ * |      |  F1  |  F2  |  F3  |  F4  |      |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   |      |      |LOWER | /Space  /       \Enter \  |RAISE |BackSP|      |
+ *                   |      |      |LOWER | /Space  /       \Enter \  |RAISE |BackSP| Del  |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
   [_ADJUST] = LAYOUT(
-  BASE,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  GAME,    KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,                   KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX, XXXXXXX,
+  GAME,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  BASE,    KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX,                   KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX,                   XXXXXXX, KC_VOLU, KC_VOLD, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, XXXXXXX, RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                             XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, XXXXXXX
+  XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX, XXXXXXX, RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                             XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______
   ),
 };
 
