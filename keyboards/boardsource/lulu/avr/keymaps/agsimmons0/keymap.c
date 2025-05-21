@@ -148,7 +148,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 void keyboard_post_init_user(void) {
     // Configure RGB Matrix
     rgb_matrix_mode_noeeprom(RGB_MATRIX_MULTISPLASH);
-    rgb_matrix_sethsv_noeeprom(0, 75, 50);
+    rgb_matrix_sethsv_noeeprom(0, 75, 30);
     rgb_matrix_set_speed_noeeprom(200);
 }
 
