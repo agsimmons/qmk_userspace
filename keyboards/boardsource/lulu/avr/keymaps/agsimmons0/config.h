@@ -28,4 +28,4 @@
 #define ENABLE_RGB_MATRIX_MULTISPLASH
 
 // ----- Misc -----------------------------------------------------------------
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
+#define RGB_MATRIX_SLEEP
