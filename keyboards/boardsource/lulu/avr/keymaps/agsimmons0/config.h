@@ -17,6 +17,17 @@
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define QUICK_TAP_TERM 0
 
+// Home row mods: hold if another key is tapped while the mod-tap is held.
+#define PERMISSIVE_HOLD
+
+// Home row mods: only resolve as a hold when chorded with the opposite hand
+// (handedness is defined by chordal_hold_layout in keymap.c).
+#define CHORDAL_HOLD
+
+// Home row mods: always tap when pressed within 150ms of the previous key,
+// so fast typing never triggers a modifier.
+#define FLOW_TAP_TERM 150
+
 // ----- OLED Display ---------------------------------------------------------
 #define SPLIT_OLED_ENABLE
 
