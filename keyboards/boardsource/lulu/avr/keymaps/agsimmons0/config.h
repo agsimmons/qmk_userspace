@@ -28,6 +28,13 @@
 // so fast typing never triggers a modifier.
 #define FLOW_TAP_TERM 150
 
+// ----- Split ----------------------------------------------------------------
+// RP2040 (blok) halves pick master by waiting for USB traffic (SPLIT_USB_DETECT).
+// On a cold boot the host can take longer than SPLIT_USB_TIMEOUT to enumerate,
+// leaving both halves as slave and the keyboard dead. The watchdog reboots a
+// slave that hears nothing from a master, so it re-runs detection.
+#define SPLIT_WATCHDOG_ENABLE
+
 // ----- OLED Display ---------------------------------------------------------
 #define SPLIT_OLED_ENABLE
 
