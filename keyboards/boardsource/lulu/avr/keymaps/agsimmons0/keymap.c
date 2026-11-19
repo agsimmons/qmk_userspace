@@ -174,12 +174,15 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT(
 );
 
 
-// Flow Tap: exempt the Shift home row mods so capitalizing right after a space
-// or letter still registers Shift. Other mods keep the default behavior.
+// Flow Tap: exempt the Shift and Ctrl home row mods so capitalizing and
+// copy/paste right after typing still register the modifier. Alt and GUI keep
+// the default behavior.
 uint16_t get_flow_tap_term(uint16_t keycode, keyrecord_t *record, uint16_t prev_keycode) {
     switch (keycode) {
         case HRM_S:
         case HRM_E:
+        case HRM_T:
+        case HRM_N:
             return 0;
     }
     if (is_flow_tap_key(keycode) && is_flow_tap_key(prev_keycode)) {
